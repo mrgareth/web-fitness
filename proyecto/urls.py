@@ -16,6 +16,21 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from fitness.views import UsuarioList, UsuarioDetail, UsuarioClear, UsuarioUpdate, UsuarioCreate
+
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+ 
+    path('usuarios/', UsuarioList.as_view(template_name = "fitness/usuarios.html"), name='usuarios'),
+ 
+    path('usuarios/detalle/<int:pk>', UsuarioDetail.as_view(template_name = "fitness/detalles.html"), name='detalles'),
+ 
+    path('usuarios/crear', UsuarioCreate.as_view(template_name = "fitness/crear.html"), name='crear'),
+
+    path('usuarios/editar/<int:pk>', UsuarioUpdate.as_view(template_name = "fitness/actualizar.html"), name='actualizar'), 
+ 
+    path('usuarios/eliminar/<int:pk>', UsuarioClear.as_view(), name='eliminar'), 
 ]
