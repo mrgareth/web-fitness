@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{# Cargamos la librería #} 
+		{% load bootstrap4 %} 
+
+		{# CSS Bootstrap #} 
+		{% bootstrap_css %}
+
+		{# Archivos #}
+		{% load static %} <!-- STATIC_URL -->
+		<title>Crear usuario</title>
+	</head>
+	<body>
+		<div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <div class=" text-center bg-warning text-danger">
+                    <br>
+                    <h3> Web Fitness </h3>
+                    <br>
+                 </div>
+                <div class="text-center">
+                    <br>
+                    <h5>Agregar usuario</h5>
+                </div>   
+		<form class="needs-validation" novalidate>
+		<div class="form-group">
+                        <label for="unombre">Nombre:</label>
+                        <input type="text" class="form-control" id="uname" placeholder="Ingrese nombre" name="unombre" required>
+                        <div class="invalid-feedback">Este campo es necesario</div>
+                    </div>
+                    <div class="form-group">
+			    <label for="uapellido">Apellido:</label>
+                        <input type="text" class="form-control" id="uapellido" placeholder="Ingrese apellido" name="uapellido" required>
+                        <div class="invalid-feedback">Este campo es necesario</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="upeso">Peso(Kg):</label>
+                                <input type="text" class="form-control" id="upeso" placeholder="Ingrese peso" name="peso" required>
+                                <div class="invalid-feedback">Este campo es necesario</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                            <label for="utalla">Talla(cm):</label>
+                            <input type="text" class="form-control" id="utalla" placeholder="Ingrese talla" name="utalla" required>
+                            <div class="invalid-feedback">Este campo es necesario</div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="uedad">Edad:</label>
+                        <input type="text" class="form-control" id="uedad" placeholder="Ingrese edad" name="uedad" required>
+                        <div class="invalid-feedback">Este campo es necesario</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="uemail">Email:</label>
+                        <input type="text" class="form-control" id="uemail" placeholder="Ingrese email" name="uemail" required>
+                        <div class="invalid-feedback">Este campo es necesario</div>
+                    </div>
+                    <button type="submit" class="btn btn-success">Agregar</button>
+		</form>
+		</div>
+            <div class="col-sm-3"></div>
+        </div>
+        <script>
+            // Disable form submissions if there are invalid fields
+            (function() {
+              'use strict';
+              window.addEventListener('load', function() {
+                // Get the forms we want to add validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                  form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                  }, false);
+                });
+              }, false);
+            })();
+            </script>
+		{# JS y jQuery Bootstrap #}
+		{% bootstrap_javascript jquery='full' %} 
+	</body>
+</html>
