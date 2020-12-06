@@ -44,3 +44,6 @@ class UsuarioClear(SuccessMessageMixin, DeleteView):
         success_message = 'Usuario Eliminado Correctamente !'
         messages.success (self.request, (success_message))       
         return reverse('usuarios')
+
+def register(request, *args, **kwargs):
+    return render(request, "fitness/register.html", {})

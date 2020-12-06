@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from fitness.views import UsuarioList, UsuarioDetail, UsuarioClear, UsuarioUpdate, UsuarioCreate
+from fitness.views import UsuarioList, UsuarioDetail, UsuarioClear, UsuarioUpdate, UsuarioCreate, register
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -32,5 +32,7 @@ urlpatterns = [
 
     path('usuarios/editar/<int:pk>', UsuarioUpdate.as_view(template_name = "fitness/actualizar.html"), name='actualizar'), 
  
-    path('usuarios/eliminar/<int:pk>', UsuarioClear.as_view(), name='eliminar'), 
+    path('usuarios/eliminar/<int:pk>', UsuarioClear.as_view(), name='eliminar'),
+
+    path('registrar/', register),
 ]
