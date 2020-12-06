@@ -1,0 +1,171 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <!-- Basic -->
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- Mobile Metas -->
+      <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <!-- Site Metas -->
+      <title>WebFitness</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- Site Icons -->
+      <link rel="shortcut icon" href="#" type="image/x-icon" />
+      <link rel="apple-touch-icon" href="#" />
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+      <!-- Pogo Slider CSS -->
+      <link rel="stylesheet" href="{% static 'css/pogo-slider.min.css' %}" />
+      <!-- Site CSS -->
+      <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+      <!-- Responsive CSS -->
+      <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="{% static 'css/custom.css' %}" />
+   </head>
+   <body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+      <!-- LOADER -->
+      <div id="preloader">
+         <div class="loader">
+            <img src="{% static 'images/loader.gif' %}" alt="#" />
+         </div>
+      </div>
+      <!-- END LOADER -->
+      <div class="wrapper">
+      <nav id="sidebar">
+         <div class="menu_section">
+            <ul>
+               <li><a href="index.html">Login</a></li>
+               <li><a href="about.html">Registration</a></li>
+               <li><a href="Recovery.html">Recovery</a></li>
+               <li><a href="contact.html">CRUD</a></li>
+            </ul>
+         </div>
+      </nav>
+      <div id="content">
+         <!-- Start header -->
+         <header class="top-header">
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm-6">
+                     <div class="logo_main">
+                        <a href="index.html"><img src="{% static 'images/main_logo.png' %}" /></a>
+                     </div>
+                  </div>
+                  <div class="col-sm-6">
+                     <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn"><img src="{% static 'images/menu_icon.png' %}"></button>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <!-- End header -->
+         <!-- Start Banner -->
+         <div class="ulockd-home-slider">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="pogoSlider" id="js-main-slider">
+                     <div class="pogoSlider-slide" style="background-image:url({% static 'images/slider_1.png' %});">
+                        <div class="container">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <div class="slide_text white_fonts">
+                                    <h3>
+Você está <br><strong class="theme_color">pronto para a</strong>mudança?</h3>
+                                    <br>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="pogoSlider-slide" style="background-image:url({% static 'images/slider_1.png' %});">
+                        <div class="container">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <div class="slide_text white_fonts">
+                                    <h3>Olvidate<br><strong class="theme_color">de los limites</strong></h3>
+                                    <br>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- .pogoSlider -->
+               </div>
+            </div>
+         </div>
+         <!-- End Banner -->
+         
+         <!-- end section -->
+         <!-- section -->
+         <div class="section about_section layout_padding">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="full paddding_left_15">
+                        <div class="heading_main text_align_left">
+                           <h2><span class="theme_color">RECUPERAR A CONTA</span></h2>
+                        </div>
+                     </div>
+                     <div class="full service_pro_section">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <div class="field">
+                                       <fieldset>
+                                          <input type="text" name="name" placeholder="Do utilizador" />
+                                       </div>
+                                       <div class="field">
+                                          <input type="O email" name="email" placeholder="Email" />
+                                       </div>
+                                       <div class="field">
+                                          <input type="text" name="phone_no" placeholder="Telefone" />
+                                       </div>
+                                       <div class="field center">
+                                          <button class="margin-top_30">Pesquisa</button>
+                                       </div>
+                                       <div class="field center">
+                                          <button class="margin-top_30">Cancelar</button>
+                                       </div>
+                                    </fieldset>
+                           </div>
+                           <div class="col-md-6 text_align_right">
+                              <div class="full">
+                                 <img class="img-responsive" src="{% static 'images/gym_icon.png' %}" alt="#" />
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- End Footer -->
+         <div class="footer_bottom">
+            <div class="container">
+               <div class="row">
+               </div>
+            </div>
+         </div>
+      </div>
+      <a href="#" id="scroll-to-top" class="hvr-radial-out"><i class="fa fa-angle-up"></i></a>
+      <!-- ALL JS FILES -->
+      <script src="{% static 'js/jquery.min.js' %}"></script>
+      <script src="{% static 'js/popper.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.min.js' %}"></script>
+      <!-- ALL PLUGINS -->
+      <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+      <script src="{% static 'js/jquery.pogo-slider.min.js' %}"></script>
+      <script src="{% static 'js/slider-index.js' %}"></script>
+      <script src="{% static 'js/smoothscroll.js' %}"></script>
+      <script src="{% static 'js/form-validator.min.js' %}"></script>
+      <script src="{% static 'js/contact-form-script.js' %}"></script>
+      <script src="{% static 'js/isotope.min.js' %}"></script>
+      <script src="{% static 'js/images-loded.min.js' %}"></script>
+      <script src="{% static 'js/custom.js' %}"></script>
+      
+   </body>
+</html>
