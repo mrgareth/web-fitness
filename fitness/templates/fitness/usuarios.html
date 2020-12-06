@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{# Cargamos la librería #} 
+		{% load bootstrap4 %} 
+
+		{# CSS Bootstrap #} 
+		{% bootstrap_css %}
+
+		{# Archivos #}
+		{% load static %} <!-- STATIC_URL -->
+		<title>
+			lista de usuarios 
+		</title>
+	</head>
+	<body>
+
+<header class="jumbotron text-center text-light bg-info">
+	<h3 >
+                Base de datos <span class="badge badge-pill badge-warning"> Web Fitness </span>
+	</h3>
+</header>
+        <div class="row">
+        	<div class="col"></div>
+            	<div class="col-sm-2">
+        		<a href = "crear" type = "button" class = "btn btn-success">Añadir</a> 
+            	</div>
+        </div>      
+        <br>
+        <div class="container">
+            	<table class="table table-hover">
+                	<thead class="thead-dark">
+                    		<tr>
+                        		<th>Nombre</th>
+                        		<th>Apellido</th>
+                               		<th>Edad</th>
+                        		<th>Email</th>
+                        		<th>Acción</th>
+                 		</tr>
+                	</thead>
+                	<tbody>
+			{% for usuario in object_list %}
+				<tr>
+					<td>{{ usuario.nombre }}</td>
+					<td>{{ usuario.apellido }}</td>
+					<td>{{ usuario.edad }}</td>
+                        		<td>{{ usuario.email }}</td>
+                        		<td>                           
+						<form method = "POST" action = "eliminar/{{ usuario.id}}"
+						     	{% csrf_token %}
+						      	<div class = "btn-group">
+								<a href="detalle/{{usuario.id}}" title="Ver" type="button" class="btn btn-success">Ver</a>
+            <a href="editar/{{usuario.id}}" title="Editar" type="button" class="btn btn-warning">Editar</a>
+            <button class="btn btn-danger" onclick="return eliminar();" type="submit">
+              Eliminar
+            </button>
+							</div>
+						</form>
+					</td>
+				</tr>
+			{% endfor%}
+			</tbody>
+		</table>
+	</div>
+	{# JS y jQuery Bootstrap #}
+		{% bootstrap_javascript jquery='full' %} 
+	</body>
+</html>

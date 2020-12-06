@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from django.views.generic import ListView, DetailView  
-from django.views.generic.edit import DeleteView, UpdateView, Create
+from django.views.generic.edit import DeleteView, UpdateView, CreateView
 
 from .models import Usuario
 
@@ -35,7 +35,7 @@ class UsuarioUpdate(SuccessMessageMixin, UpdateView):
     def get_success_url(self):               
         return reverse('usuarios')
 
-class PostreEliminar(SuccessMessageMixin, DeleteView): 
+class UsuarioClear(SuccessMessageMixin, DeleteView): 
     model = Usuario 
     form = Usuario
     fields = "__all__"     
