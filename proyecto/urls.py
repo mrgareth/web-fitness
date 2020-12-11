@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from fitness.views import UsuarioList, UsuarioDetail, UsuarioClear, UsuarioUpdate, UsuarioCreate, register
 
@@ -22,6 +22,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    path('i18n/', include('django.conf.urls.i18n')),
+
     path('admin/', admin.site.urls),
  
     path('usuarios/', UsuarioList.as_view(template_name = "fitness/usuarios.html"), name='usuarios'),
