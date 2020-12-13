@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{# Cargamos la librería #} 
+		{% load bootstrap4 %} 
+
+		{# CSS Bootstrap #} 
+		{% bootstrap_css %}
+
+		{# Archivos #}
+		{% load static %} <!-- STATIC_URL -->
+        
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}" th:href="@{/css/index.css}">
+        
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+            google.charts.load('current', {packages: ['corechart', 'line']});
+            google.charts.setOnLoadCallback(drawBasic);
+
+            function drawBasic() {
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('number', 'X');
+            data.addColumn('number', 'Peso');
+                    
+            data.addRows([
+                [1, 45.3],  [8, 46],  [16, 46.4],  [25, 47], [31,47.3]
+            ]);
+
+            var options = {
+      	        title: 'Tabla de pesos de Noviembre',
+                hAxis: {
+                    title: 'Día'
+                },
+                vAxis: {
+                    title: 'Peso'
+                }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+            chart.draw(data, options);
+    }
+    </script>
+	</head>
+	<body>
+        <br>
+        <h1 id='visor_imagenes'>PESOS DE NOVIEMBRE</h1>
+        <div id="chart_div" style="width: 900px; height: 500px"></div>
+		{# JS y jQuery Bootstrap #}
+		{% bootstrap_javascript jquery='full' %} 
+	</body>
+</html>

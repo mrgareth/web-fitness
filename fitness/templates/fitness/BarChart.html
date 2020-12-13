@@ -1,0 +1,71 @@
+
+<html>
+  <head>
+    <style>
+    body {
+          background-image: url(img/fondo.jpg);
+          margin: 0 0 1rem;
+          height: 10rem;
+          margin-top: 20px;
+          margin-left: 200px;
+          margin-right: 200px;
+          /* align-items por defecto tiene el valor `stretch` */
+          align-items: start;
+        }
+    </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawStuff);
+
+      function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+          ['Meses', 'Porcentage'],
+          ["Enero", 44],
+          ["Febrero", 31],
+          ["Marzo", 12],
+          ["Abril", 10],
+          ["Mayo", 3],
+          ["Junio", 78],
+          ["Julio", 45],
+          ["Agosto", 23],
+          ["Septiembre", 48],
+          ["Octubre", 27],
+          ["Noviembre", 71],
+          ["Diciembre", 29]
+        ]);
+
+        var options = {
+          
+          width: 975,
+          eight: 400,
+          legend: { position: 'none' },
+          bars: 'horizontal', // Required for Material Bar Charts.
+          axes: {
+            x: {
+              0: { side: 'top', label: 'Percentage'} // Top x-axis.
+            }
+          },
+          bar: { groupWidth: "90%" }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+        chart.draw(data, options);
+      };
+    </script>
+  </head>
+  <body>
+    <br>
+    <style>
+    #visor_imagenes{
+    	text-align: center;
+    	color:#fff;
+    	background-color: #000;
+
+	}
+	</style>
+    <h1 id='visor_imagenes'>INFORME DE EJERCICIOS</h1>
+    <br>
+    <div id="top_x_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
