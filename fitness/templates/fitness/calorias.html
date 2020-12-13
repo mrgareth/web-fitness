@@ -1,0 +1,66 @@
+
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">	  
+    <title>Progreso Calorias</title>
+
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Framework BOOTSTRAP-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Los iconos de Fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <!-- Nuestro css-->
+    <link rel="stylesheet" type="text/css" href="{% static "css/calorias.css" %}" th:href="@{/css/index.css}">
+    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Fechas', 'kcal'],
+          ['09/12',  1000],
+          ['10/12',  1170],
+          ['11/12',  1850],
+          ['12/12',  1680],
+	  ['13/12',  1510],
+	  ['14/12',  1850],
+	  ['15/12',  1850]	
+        ]);
+
+        var options = {
+          title: 'Progreso de la ultima semana en Kcal',
+          hAxis: {title: 'Fechas',  titleTextStyle: {color: '#ff9f1c'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+
+
+  </head>
+  <body>
+	  <div class="modal-dialog text-center">
+      		<div class="col-sm-20 main-section">
+        		<div class="modal-content">
+			  <div class="col-22 user-img">
+		  	    <img src="{% static "img/user.png" %}">
+	   		  </div>
+				<div id="chart_div" style="width: 100%; height: 500px;"></div>
+	  		</div>
+	  	</div>
+	  </div>
+  </body>
+</html>

@@ -47,3 +47,6 @@ class UsuarioClear(SuccessMessageMixin, DeleteView):
 
 def register(request, *args, **kwargs):
     return render(request, "fitness/register.html", {})
+
+def calorias(request):
+    return render(request, "fitness/calorias.html", {})
