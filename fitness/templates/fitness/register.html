@@ -46,24 +46,24 @@
 	  </div>
 	     <form class="col-12">
 		<div class="form-group" id="user-group">
-		  <input type="text" class="form-control" placeholder="Nombre de Usuario"/>
+		  <input type="text" class="form-control" placeholder={% trans "Nombre de Usuario" %}/>
 		</div>
 		<div class="form-group" id="password-group">
-                  <input type="password" class="form-control" placeholder="Contraseña"/>
+                  <input type="password" class="form-control" placeholder={% trans "Contraseña" %}/>
                 </div>
 		<div class="form-group" id="password2-group">
-                  <input type="password" class="form-control" placeholder="Repita Contraseña"/>
+			<input type="password" class="form-control" placeholder={% trans "Repita Contraseña" %}/>
                 </div>
                 <div class="form-group" id="email-group">
-		  <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Direccion de Correo">
-                  <small id="emailHelp" class="form-text text-muted">Su correo no sera compartido con terceros.</small>
+		  <input type="email" class="form-control" aria-describedby="emailHelp" placeholder={% trans "Direccion de Correo" %}>
+                  <small id="emailHelp" class="form-text text-muted">{% trans "Su correo no sera compartido con terceros" %}</small>
 		</div>
 		<button type="button" class="btn btn-outline-secondary">Terminos de Servicio</button><br>
 	        <div class="form-check">
   		  <input class="form-check-input" type="checkbox" value="" id="check">
-  		  <label class="form-check-label" for="check">Acepto los terminos de servicio.</label>
+  		  <label class="form-check-label" for="check">{% trans "Acepto los términos de servicio" %}</label>
 		</div><br>
-		<button type="submit" class="btn btn-success"><i class="fas fa-sign-in-alt"></i> Registrarse </button>
+		<button type="submit" class="btn btn-success"><i class="fas fa-sign-in-alt"></i>{% trans "Registrarse" %}</button>
 	     </form>
 
 	     
