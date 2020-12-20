@@ -61,3 +61,92 @@ msgstr "I accept the terms of service"
 #: proyecto/settings.py:133
 msgid "Registrarse"
 msgstr "Check in"
+
+#: proyecto/settings.py:134
+msgid "lista de usuarios"
+msgstr "user list"
+
+#: proyecto/settings.py:135
+msgid "Base de Datos"
+msgstr "Database"
+
+#: proyecto/settings.py:136
+msgid "Añadir"
+msgstr "Add"
+
+#: proyecto/settings.py:137
+msgid "Nombre"
+msgstr "Name"
+
+#: proyecto/settings.py:138
+msgid "Apellido"
+msgstr "Last name"
+
+#: proyecto/settings.py:139
+msgid "Edad"
+msgstr "Age"
+
+#: proyecto/settings.py:140
+msgid "Email"
+msgstr "E-mail"
+
+#: proyecto/settings.py:141
+msgid "Acción"
+msgstr "Action"
+
+#: proyecto/settings.py:142
+msgid "Ver"
+msgstr "See"
+
+#: proyecto/settings.py:143
+msgid "Editar"
+msgstr "Edit"
+
+#: proyecto/settings.py:144
+msgid "Eliminar"
+msgstr "Remove"
+
+#: proyecto/settings.py:145
+msgid "Agregar usuario"
+msgstr "Add user"
+
+#: proyecto/settings.py:146
+msgid "Ingrese Nombre"
+msgstr "Enter Name"
+
+#: proyecto/settings.py:147
+msgid "Ingrese Apellido"
+msgstr "Enter Surname"
+
+#: proyecto/settings.py:148
+msgid "Peso(kg)"
+msgstr "Weight (kg)"
+
+#: proyecto/settings.py:149
+msgid "Ingrese Peso"
+msgstr "Enter Weight"
+
+#: proyecto/settings.py:150
+msgid "Talla(cm)"
+msgstr "Size (cm)"
+
+#: proyecto/settings.py:151
+msgid "Ingrese Talla"
+msgstr "Enter Size"
+
+#: proyecto/settings.py:152
+msgid "Ingrese Edad"
+msgstr "Enter Age"
+
+#: proyecto/settings.py:153
+msgid "Ingrese Email"
+msgstr "Enter Email"
+
+#: proyecto/settings.py:154
+msgid "Agregar"
+msgstr "Add"
+
+#: proyecto/settings.py:155
+msgid "Crear usuario"
+msgstr "Create user"
+

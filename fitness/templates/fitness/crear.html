@@ -1,3 +1,4 @@
+{% load i18n %}
 <!DOCTYPE html>
 <html>
 	<head>
@@ -9,10 +10,27 @@
 
 		{# Archivos #}
 		{% load static %} <!-- STATIC_URL -->
-		<title>Crear usuario</title>
+		<title>{% trans "Crear usuario" %}</title>
 	</head>
 	<body>
-		<div class="row">
+
+	<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+          <input name="next" type="hidden" value="{{ redirect_to }}" />
+          <select name="language">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}
+                  <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>{{ language.name_local }} ({{ language.code }})
+		  </option>
+                {% endfor %}
+          </select>
+          <input type="submit" value="Go" />
+        </form>
+
+	
+		
+	<div class="row">
             <div class="col-sm-3"></div>
             <div class="col-sm-6">
                 <div class=" text-center bg-warning text-danger">
@@ -22,46 +40,46 @@
                  </div>
                 <div class="text-center">
                     <br>
-                    <h5>Agregar usuario</h5>
+		    <h5>{% trans "Agregar usuario" %}</h5>
                 </div>   
 		<form class="needs-validation" novalidate>
 		<div class="form-group">
-                        <label for="unombre">Nombre:</label>
-                        <input type="text" class="form-control" id="uname" placeholder="Ingrese nombre" name="unombre" required>
+			<label for="unombre">{% trans "Nombre" %}:</label>
+			<input type="text" class="form-control" id="uname" placeholder={% trans "Ingrese nombre" %} name="unombre" required>
                         <div class="invalid-feedback">Este campo es necesario</div>
                     </div>
                     <div class="form-group">
-			    <label for="uapellido">Apellido:</label>
-                        <input type="text" class="form-control" id="uapellido" placeholder="Ingrese apellido" name="uapellido" required>
+			    <label for="uapellido">{% trans "Apellido" %}:</label>
+			    <input type="text" class="form-control" id="uapellido" placeholder={% trans "Ingrese apellido" %} name="uapellido" required>
                         <div class="invalid-feedback">Este campo es necesario</div>
                     </div>
                     <div class="row">
                         <div class="col">
                             <div class="form-group">
-                                <label for="upeso">Peso(Kg):</label>
-                                <input type="text" class="form-control" id="upeso" placeholder="Ingrese peso" name="peso" required>
+				    <label for="upeso">{% trans "Peso(Kg)" %}:</label>
+				    <input type="text" class="form-control" id="upeso" placeholder={% trans "Ingrese peso" %} name="peso" required>
                                 <div class="invalid-feedback">Este campo es necesario</div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-group">
-                            <label for="utalla">Talla(cm):</label>
-                            <input type="text" class="form-control" id="utalla" placeholder="Ingrese talla" name="utalla" required>
+				    <label for="utalla">{% trans "Talla(cm)" %}:</label>
+				    <input type="text" class="form-control" id="utalla" placeholder={% trans "Ingrese talla" %} name="utalla" required>
                             <div class="invalid-feedback">Este campo es necesario</div>
                         </div>
                     </div>
                     </div>
                     <div class="form-group">
-                        <label for="uedad">Edad:</label>
-                        <input type="text" class="form-control" id="uedad" placeholder="Ingrese edad" name="uedad" required>
+			    <label for="uedad">{% trans "Edad" %}:</label>
+			    <input type="text" class="form-control" id="uedad" placeholder={% trans "Ingrese edad" %} name="uedad" required>
                         <div class="invalid-feedback">Este campo es necesario</div>
                     </div>
                     <div class="form-group">
-                        <label for="uemail">Email:</label>
-                        <input type="text" class="form-control" id="uemail" placeholder="Ingrese email" name="uemail" required>
+			    <label for="uemail">{% trans "Email" %}:</label>
+			    <input type="text" class="form-control" id="uemail" placeholder={% trans "Ingrese email" %} name="uemail" required>
                         <div class="invalid-feedback">Este campo es necesario</div>
                     </div>
-                    <button type="submit" class="btn btn-success">Agregar</button>
+		    <button type="submit" class="btn btn-success">{% trans "Agregar" %}</button>
 		</form>
 		</div>
             <div class="col-sm-3"></div>
