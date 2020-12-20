@@ -31,41 +31,33 @@ msgid "Ingles"
 msgstr "English"
 
 #: proyecto/settings.py:126
-msgid "Nombre de Usuario"
-msgstr "Username"
+msgid "Usuario "
+msgstr "Username "
 
 #: proyecto/settings.py:127
-msgid "Terminos"
-msgstr "Terms"
+msgid "Contraseña "
+msgstr "Password "
 
 #: proyecto/settings.py:128
-msgid "Contraseña"
-msgstr "Password"
+msgid "Repetir "
+msgstr "Repeat "
 
 #: proyecto/settings.py:129
-msgid "Repita"
-msgstr "Repeat"
-
-#: proyecto/settings.py:130
 msgid "Direccion de Correo"
 msgstr "Mail address"
 
-#: proyecto/settings.py:131
+#: proyecto/settings.py:130
 msgid "Su correo no sera compartido con terceros"
 msgstr "Your email will not be shared with third parties"
 
+#: proyecto/settings.py:131
+msgid "Terminos de Servicio"
+msgstr "Terms of Service"
+
 #: proyecto/settings.py:132
-msgid "de"
-msgstr "of"
-
-#: proyecto/settings.py:133
-msgid "Servicio"
-msgstr "Service"
-
-#: proyecto/settings.py:134
 msgid "Acepto los términos de servicio"
 msgstr "I accept the terms of service"
 
-#: proyecto/settings.py:135
+#: proyecto/settings.py:133
 msgid "Registrarse"
 msgstr "Check in"

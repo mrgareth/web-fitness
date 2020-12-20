@@ -31,65 +31,33 @@ msgid "Ingles"
 msgstr "Inglês"
 
 #: proyecto/settings.py:126
-msgid "Nombre"
-msgstr "Nome"
+msgid "Usuario "
+msgstr "Usuário "
 
 #: proyecto/settings.py:127
-msgid "Usuario"
-msgstr "usuário"
+msgid "Contraseña "
+msgstr "Senha "
 
 #: proyecto/settings.py:128
-msgid "Contraseña"
-msgstr "Senha"
+msgid "Repetir "
+msgstr "Repetir "
 
 #: proyecto/settings.py:129
-msgid "Correo"
-msgstr "Correio"
+msgid "Direccion de Correo"
+msgstr "Endereço de correio"
 
 #: proyecto/settings.py:130
-msgid "Electrónico"
-msgstr "Eletrônico"
+msgid "Su correo no sera compartido con terceros"
+msgstr "Seu e-mail não será compartilhado com terceiros"
 
 #: proyecto/settings.py:131
-msgid "Direccion"
-msgstr "Endereço"
+msgid "Terminos de Servicio"
+msgstr "Termos de serviço"
 
 #: proyecto/settings.py:132
-msgid "Repita"
-msgstr "Repita a"
+msgid "Acepto los términos de servicio"
+msgstr "Eu aceito os termos de serviço"
 
 #: proyecto/settings.py:133
-msgid "compartido"
-msgstr "compartilhado"
-
-#: proyecto/settings.py:134
-msgid "terceros"
-msgstr "terceiros"
-
-#: proyecto/settings.py:135
-msgid "no"
-msgstr "não"
-
-#: proyecto/settings.py:136
-msgid "con"
-msgstr "com"
-
-#: proyecto/settings.py:137
-msgid "su"
-msgstr "Seu"
-
-#: proyecto/settings.py:138
-msgid "Terminos"
-msgstr "Termos"
-
-#: proyecto/settings.py:139
-msgid "Servicio"
-msgstr "serviço"
-
-#: proyecto/settings.py:140
 msgid "Registrarse"
 msgstr "Check-in"
-
-#: proyecto/settings.py:141
-msgid "Acepto"
-msgstr "Eu aceito"
