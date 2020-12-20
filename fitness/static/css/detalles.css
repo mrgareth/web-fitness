@@ -1,0 +1,17 @@
+body{
+    margin: 0 0 1rem;
+    height: 10rem;
+    margin-top: 100px;
+    margin-left: 425px;
+    margin-right: 425px;
+    /* align-items por defecto tiene el valor `stretch` */
+    align-items: start;
+}
+
+.detalles{
+    background-color: #ffa01c33;
+	padding: 0 20px;
+    box-shadow: 0px 0px 4px #848484;
+    margin-top: 10px;
+ 
+}
